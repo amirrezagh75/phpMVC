@@ -5,7 +5,7 @@
     <div class="col-md-6 mx-auto">
 
        <div class="card card-body bg-light mgt-5">
-       
+        <?php flash("register_success"); ?>
         <h2> Login to your account</h2>
         <p>Please fill the blank spaces</p>
 

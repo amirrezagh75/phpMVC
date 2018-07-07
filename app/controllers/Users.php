@@ -93,6 +93,7 @@ class Users extends Controller{
 
                 if ($this->userModel->register($data))
                 {
+                    flash("register_success","You are registered and now you can login");
                     redirect("users/login");
 
                 }
