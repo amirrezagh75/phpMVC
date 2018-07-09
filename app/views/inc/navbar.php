@@ -18,12 +18,25 @@
       </ul>
 
       <ul class="navbar-nav ml-auto">
+      <?php if(isset($_SESSION['user_id'])) : ?>
+      <li class="nav-item ">
+      <p class="text-white">
+          Welcome  <span class="text-success"> <?php echo $_SESSION['user_name'] ?>
+      </span>
+
+      <li class="nav-item ">
+          <a class="nav-link btn btn-danger" href="<?php echo URLROOT; ?>/users/logout"><span class=text-white >Logout </span></a>
+        </li>
+      </p>
+        </li>
+      <?php else :?>
         <li class="nav-item ">
           <a class="nav-link" href="<?php echo URLROOT; ?>/users/register">Register</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>
         </li>
+<?php endif;?>
       </ul>
     </div>
   </div>
